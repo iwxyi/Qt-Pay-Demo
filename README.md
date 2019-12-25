@@ -3,7 +3,7 @@ Qt Pay Demo
 
 基于 PayJS 的 Qt 应用内支付小程序
 
-![image-20191225102348129](README.assets/image-20191225102348129.png)
+![截图](pictures/1.png)
 
 点击支付按钮获取二维码
 
