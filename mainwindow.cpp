@@ -20,7 +20,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString param = "user_id=12345678&total_fee=0.03&purchase_type=1&attach=nothing";
+    QString fee = QString::number(ui->doubleSpinBox->value());
+
+    QString param = "user_id=12345678&total_fee="+fee+"&purchase_type=1&attach=nothing&count=3";
     const QString url = server + "wxpay_pay.php?" + param;
 
     connect(new NetUtil(url), &NetUtil::finished, this, [=](QString s){
