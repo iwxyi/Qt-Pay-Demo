@@ -4,12 +4,12 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow),
-      server("http://writerfly.cn/server/pay/")
+      server("http://writerfly.cn/service/pay/")
 {
     ui->setupUi(this);
 
     query_timer = new QTimer(this);
-    query_timer->setInterval(1000);
+    query_timer->setInterval(5000);
     connect(query_timer, SIGNAL(timeout()), this, SLOT(slotQueryIsPaid()));
 }
 
